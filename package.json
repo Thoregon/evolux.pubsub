@@ -1,0 +1,25 @@
+{
+  "name": "evolux.pubsub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gendoc": "./node_modules/.bin/esdoc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thoregon/evolux.pubsub.git"
+  },
+  "keywords": [],
+  "author": "Bernhard Lukassen <bl@bernhard-lukassen.com> (http://www.bernhard-lukassen.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "esdoc": "^1.1.0",
+    "esdoc-node": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0"
+  },
+  "dependencies": {
+    "evolux.supervise": "git+ssh://git@github.com/Thoregon/evolux.supervise.git"
+  }
+}

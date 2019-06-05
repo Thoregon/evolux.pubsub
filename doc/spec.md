@@ -1,0 +1,5 @@
+pubsub
+======
+
+* pubsub types extensible
+ 
