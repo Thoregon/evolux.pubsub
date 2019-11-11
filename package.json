@@ -20,6 +20,5 @@
     "esdoc-standard-plugin": "^1.0.0"
   },
   "dependencies": {
-    "evolux.supervise": "git+ssh://git@github.com/Thoregon/evolux.supervise.git"
   }
 }
