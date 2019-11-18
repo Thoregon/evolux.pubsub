@@ -6,7 +6,7 @@
 
 import EventEmitter from "../../lib/eventemitter.mjs";
 
-class MyEmitter extends  EventEmitter {
+class MyEmitter extends EventEmitter {
 
     get publishes() {
         return { test: 'test event' };
