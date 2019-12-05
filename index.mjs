@@ -1,4 +1,3 @@
-import {Matter} from "../evolux.matter/index.mjs";
 
 /**
  *
@@ -6,16 +5,11 @@ import {Matter} from "../evolux.matter/index.mjs";
  * @author: Bernhard Lukassen
  */
 
-
-const myuniverse = () => {
-    // this is a cryptic way to get the 'global' object or 'window' in strict mode. direct code references will throw an error
-    const space = (1,eval)("this");
-    return space.universe ? space.universe : space;
-};
-
+export { default as EventEmitter }  from './lib/eventemitter.mjs'
 import Registry                     from "./lib/registry.mjs";
 export { default as Registry }      from './lib/registry.mjs';
-export { default as EventEmitter }  from './lib/eventemitter.mjs'
+
+import { myuniverse }               from "/evolux.universe";
 
 export const service = {
     install() {
