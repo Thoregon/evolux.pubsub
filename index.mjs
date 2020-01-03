@@ -13,33 +13,33 @@ import { myuniverse }               from "/evolux.universe";
 
 export const service = {
     install() {
-        console.log('** pubsub install()');
+        myuniverse().logger.debug('** pubsub install()');
         myuniverse().pubsub = new Registry();
     },
 
     uninstall() {
-        console.log('** pubsub uninstall()');
+        myuniverse().logger.debug('** pubsub uninstall()');
         myuniverse().pubsub.unregisterAll();
         delete handle().pubsub;
     },
 
     resolve() {
-        console.log('** pubsub resolve()');
+        myuniverse().logger.debug('** pubsub resolve()');
         // nothing to do
     },
 
     start() {
-        console.log('** pubsub start()');
+        myuniverse().logger.debug('** pubsub start()');
         myuniverse().pubsub.resumeAll();
     },
 
     stop() {
-        console.log('** pubsub stop()');
+        myuniverse().logger.debug('** pubsub stop()');
         myuniverse().pubsub.pauseAll();
     },
 
     update() {
-        console.log('** pubsub update()');
+        myuniverse().logger.debug('** pubsub update()');
         this.stop();
         let saved = myuniverse().pubsub.entries;
         this.uninstall();
