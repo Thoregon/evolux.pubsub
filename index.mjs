@@ -9,18 +9,19 @@ export { default as EventEmitter }  from './lib/eventemitter.mjs'
 import Registry                     from "./lib/registry.mjs";
 export { default as Registry }      from './lib/registry.mjs';
 
-import { myuniverse }               from "/evolux.universe";
+import { myuniverse, myevolux }     from "/evolux.universe";
 
 export const service = {
     install() {
         myuniverse().logger.debug('** pubsub install()');
-        myuniverse().pubsub = new Registry();
+        // todo: introduce a service registry for the protouniverse to handle service instances before the serivce can be 'officially' installed.
+        if (!myevolux().pubsub) myevolux().pubsub = new Registry();
     },
 
     uninstall() {
         myuniverse().logger.debug('** pubsub uninstall()');
         myuniverse().pubsub.unregisterAll();
-        delete handle().pubsub;
+        delete myevolux().pubsub;
     },
 
     resolve() {
@@ -30,20 +31,22 @@ export const service = {
 
     start() {
         myuniverse().logger.debug('** pubsub start()');
-        myuniverse().pubsub.resumeAll();
+        myevolux().pubsub.resumeAll();
     },
 
     stop() {
         myuniverse().logger.debug('** pubsub stop()');
-        myuniverse().pubsub.pauseAll();
+        myevolux().pubsub.pauseAll();
     },
 
     update() {
         myuniverse().logger.debug('** pubsub update()');
+/*
         this.stop();
-        let saved = myuniverse().pubsub.entries;
+        let saved = myevolux().pubsub.entries;
         this.uninstall();
         this.install();
-        myuniverse().pubsub.reregister(...saved);
+        myevolux().pubsub.reregister(...saved);
+*/
     }
 };

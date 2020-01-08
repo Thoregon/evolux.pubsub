@@ -1,6 +1,8 @@
 ToDo
 ====
 
+- publish on universe.pubsub
+
 - rename package
     - name it more like 'Event'
   
