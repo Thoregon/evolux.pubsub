@@ -14,7 +14,6 @@ import { myuniverse, tservices }     from "/evolux.universe";
 export const service = {
     install() {
         myuniverse().logger.debug('** pubsub install()');
-        // todo: introduce a service registry for the protouniverse to handle service instances before the serivce can be 'officially' installed.
         if (!tservices().pubsub) tservices().pubsub = new Registry();
     },
 
