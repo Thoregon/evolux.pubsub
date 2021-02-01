@@ -16,7 +16,5 @@
   "author": "Bernhard Lukassen <bl@bernhard-lukassen.com> (http://www.bernhard-lukassen.com/)",
   "license": "MIT",
   "devDependencies": {},
-  "dependencies": {
-    "cuid": "^2.1.6"
-  }
+  "dependencies": {}
 }
